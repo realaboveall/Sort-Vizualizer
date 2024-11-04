@@ -14,13 +14,13 @@
   <title>Sorting visualizer</title>
 </head>
 
-<body>
+<body id = "hero">
   <div class="nav-container">
     <h2 class="title" onclick="window.location.reload()">
       Sorting visualizer
     </h2>
     <div class="navbar" id="navbar">
-      <a id="random" onclick="RenderScreen()">Generate array</a>
+      <a id="random" onclick="RenderScreen()" id="gen">Generate array</a>
       <span class="options">
         <select name="select sort algorithm" id="menu" class="algo-menu">
           <option value="0">Choose algorithm</option>
@@ -59,6 +59,7 @@
         </select>
       </span>
       <a class="start">Sort</a>
+      <img src="images/moon.png" alt="Dark Mode" id="icon">
       <a class="icon"><i class="fa fa-bars"></i></a>
     </div>
   </div>
@@ -66,7 +67,7 @@
     <div class="array"></div>
   </div>
   <footer class="footer">
-    <p>Created with <i class="fa fa-heart"></i> by AboveAll</p>
+    <p id="ftrtxt">Created with <i class="fa fa-heart"></i> by AboveAll</p>
     <p>
       <a href="https://steamcommunity.com/id/SabkeUparEkHai/" target="_blank" class="link">
         <i class="fa fa-steam" aria-hidden="true"></i>
@@ -79,6 +80,19 @@
   <script src="./scripts/app.js"></script>
   <script src="./scripts/helper.js"></script>
   <script src="./scripts/sort-algorithms.js"></script>
+  <script>
+        var icon = document.getElementById("icon");
+      icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+          if (document.body.classList.contains("dark-theme")){
+            icon.src = "images/sun.png";
+            
+          }
+          else{
+            icon.src="images/moon.png";
+          }
+      }
+  </script>
 </body>
 
 </html>

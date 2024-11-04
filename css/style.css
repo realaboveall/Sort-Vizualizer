@@ -1,13 +1,36 @@
 :root {
-  --primary-color: #1abc9c;
-  --secondary-color: #16a085;
+  --white-color: #ffffff;
+  --primary-color: #7F70E6;
+  --secondary-color: #A570E6;
+  --tertiary-color: #000000;
+  --text-color: #ffffff;
+  --cell-color:#d6d6d6;
+  --ftext-color: #2c3e50;
+  --ic-color: #ff5252;
+  --shadow-color: rgba(0, 0, 0, 0.16) 0px 1px 4px; 
 }
+.dark-theme{
+    --primary-color: #7A1CAC;
+    --secondary-color: #AD49E1;
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --cell-color:#EBD3F8;
+    --white-color: #000000;
+    --ftext-color: #ffffff;
+    --ic-color: #EBD3F8;
+    --nvbr-color: #2E073F;
+    --bgcolr: #2E073F;
+    --shadow-color: rgba(white, white, black, 0.16) 0px 1px 4px;
+}
+
+  
 * {
-  /* Below is the standard CSS code one should add to get rid of default margins and padding which most of tge HTML elements have */
+  background-color: var(--bgcolr);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: lighter;
   user-select: none;
 }
 body {
@@ -51,7 +74,7 @@ body {
   padding: 8px 10px;
   border-radius: 6px;
   transition: 0.3s;
-  background-color: #1abc9c;
+  background-color: var(--nvbr-color);
 }
 .navbar a:hover {
   background-color: transparent;
@@ -62,7 +85,7 @@ body {
   border: none;
   border-radius: 4px;
   padding: 6px 8px;
-  background-color: #1abc9c;
+  background-color: #2E073F;
   color: white;
 }
 .navbar > .icon {
@@ -77,7 +100,7 @@ body {
 /* Center css */
 .center {
   margin: 0 auto;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; /* Added shadow to make page border free */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 5px 10px; 
   height: 420px;
   width: 410px;
   max-height: 731px;
@@ -96,7 +119,7 @@ body {
   flex: 0.5;
   width: 0.000001%;
   margin: 1px;
-  background-color: #d6d6d6;
+  background-color: var(--cell-color);
   resize: horizontal;
   position: relative;
   transition: all 0.4s ease-in;
@@ -128,21 +151,25 @@ body {
 
 /* Footer CSS */
 .fa.fa-heart {
-  color: #eb2c13;
+  color: var(--ic-color);
 }
 footer {
+  /* background-color: var(--secondary-color); */
   text-align: center;
   font-size: 18px;
-  color: #2c3e50;
+  color: var(--ftext-color);
   padding: 1.6em;
 }
 .footer > p:nth-child(1) {
   margin-bottom: 0.6em;
 }
+.ftrtxt {
+  font-family: cursive;
+}
 .link {
   text-decoration: none;
   font-weight: bold;
-  color: #ff5252;
+  color: var(--ic-color);
   font-size: 20px;
 }
 
@@ -171,4 +198,14 @@ footer {
   .center {
     width: 95%;
   }
+}
+
+#icon{
+  width: 30px;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+.gen{
+  color: #7F70E6;
 }
