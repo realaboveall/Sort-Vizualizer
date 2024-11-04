@@ -1,4 +1,17 @@
 "use strict";
+
+var icon = document.getElementById("icon");
+icon.onclick = function(){
+  document.body.classList.toggle("dark-theme");
+    if (document.body.classList.contains("dark-theme")){
+      icon.src = "images/sun.png";
+      
+    }
+    else{
+      icon.src="images/moon.png";
+    }
+}
+
 const start = async () => {
   let algoValue = Number(document.querySelector(".algo-menu").value);
   let speedValue = Number(document.querySelector(".speed-menu").value);
